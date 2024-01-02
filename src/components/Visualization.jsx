@@ -2,7 +2,6 @@ import React from 'react';
 import '../App.css';
 import { useSelector } from 'react-redux';
 
-
 const Visualization = () => {
   const result=useSelector((state)=>state.binary.result)
   const array=useSelector((state)=>state.binary.array)

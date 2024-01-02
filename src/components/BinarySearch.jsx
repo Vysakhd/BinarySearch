@@ -12,8 +12,6 @@ const BinarySearch = () => {
   const value=e.target.value.split(',').map(Number)
   setArray(value)
   dispatch(setInputArray(value))
-
-
  }
 
   const binarySearch = async () => {
@@ -27,7 +25,6 @@ const BinarySearch = () => {
       await new Promise((resolve) => setTimeout(resolve, 250));
       const mid = Math.floor((left + right) / 2);
       
-     
       if (array[mid] === target) {
         dispatch(setleft(mid));
         dispatch(setright(mid));
@@ -77,9 +74,6 @@ const BinarySearch = () => {
       <br />
       <button onClick={binarySearch}>Search</button>
       <br />
-      
-     
-
       {executionTime !== null && <p>Execution Time: {executionTime.toFixed(2)} milliseconds</p>}
     </div>
   );
